@@ -80,9 +80,9 @@ def find_password():
             password = data[website]['password']
             email = data[website]['email']
             messagebox.showinfo(title=website, message=f'Email:{email}\nPassword:{password}')
-            print(password)
+
         else:
-            messagebox.showinfo(title='hol up', message='No details for that website exist')
+            messagebox.showinfo(title='hol up', message=f'No details for that {website} exists')
     finally:
         web_input.delete(0, END)
         pass_entry.delete(0, END)
